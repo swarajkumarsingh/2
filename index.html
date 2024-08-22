@@ -17,6 +17,18 @@
       .then(json => console.log(json))
     </script>
     <script type="text/javascript">
+      window.scroll({
+        top: 2500, 
+        left: 0, 
+        behavior: 'smooth'
+      });
+
+      window.scrollBy({ 
+        top: 100, // could be negative value
+        left: 0, 
+        behavior: 'smooth' 
+      });
+
       var isInIFrame = window.self !== window.top ? true : false;
 
       if (!isInIFrame) {
@@ -387,6 +399,7 @@
       }
       html {
         font-size: 106.25%;
+        scroll-behavior: smooth;
       }
       a,
       .page-title {
@@ -6869,7 +6882,7 @@
                                   class="menu-item menu-item-type-post_type menu-item-object-page menu-item-20"
                                 >
                                   <a
-                                    href="https://websitedemos.net/roofing-agency-02/about/"
+                                    href="#about-section"
                                     class="menu-link"
                                     >About</a
                                   >
@@ -6879,7 +6892,7 @@
                                   class="menu-item menu-item-type-post_type menu-item-object-page menu-item-23"
                                 >
                                   <a
-                                    href="https://websitedemos.net/roofing-agency-02/services/"
+                                    href="#service-section"
                                     class="menu-link"
                                     >Services</a
                                   >
@@ -6899,7 +6912,7 @@
                                   class="menu-item menu-item-type-post_type menu-item-object-page menu-item-21"
                                 >
                                   <a
-                                    href="https://websitedemos.net/roofing-agency-02/contact-us/"
+                                    href="#contact-section"
                                     class="menu-link"
                                     >Contact Us</a
                                   >
@@ -7229,7 +7242,7 @@
                               <div class="elementor-icon-box-wrapper">
                                 <div class="elementor-icon-box-content">
                                   <h2 class="elementor-icon-box-title">
-                                    <span>
+                                    <span  id="about-section">
                                       Professional Interior Designer Contractors
                                     </span>
                                   </h2>
@@ -7444,6 +7457,7 @@
                             <div class="elementor-widget-container">
                               <h2
                                 class="elementor-heading-title elementor-size-default"
+                                id="service-section"
                               >
                                 We Provide Superior Interior Design
                               </h2>
@@ -8211,6 +8225,7 @@
                             <div class="elementor-widget-container">
                               <h2
                                 class="elementor-heading-title elementor-size-default"
+                                 id="contact-section"
                               >
                                 Get A Solutions For Your Interior Roofing Services
                               </h2>
