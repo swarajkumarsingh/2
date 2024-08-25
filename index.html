@@ -12,11 +12,16 @@
       async=""
       src="./Home - Roofing Agency_files/gtm.js.download"
     ></script>
-    <script>
-      fetch('https://jsonplaceholder.typicode.com/todos/1')
-      .then(response => response.json())
-      .then(json => console.log(json))
-    </script>
+<script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init({
+        publicKey: "b6hhskkwjeFz7jelz",
+      });
+   })();
+</script>
     <script type="text/javascript">
       window.scroll({
         top: 2500, 
@@ -72,6 +77,7 @@
         document.head.appendChild(style);
       }
     </script>
+    <script defer src="./Home - Roofing Agency_files/email_script.js"></script>
     <link
       id="showcase-cta-google-fonts"
       rel="stylesheet"
@@ -6639,13 +6645,6 @@
       defer=""
     ></script>
     <script
-      src="chrome-extension://kapjaoifikajdcdehfdlmojlepfpkpoe/sqrx-email-notifier/sqrx-email-notifier.esm.js"
-      type="module"
-      data-resources-url="chrome-extension://kapjaoifikajdcdehfdlmojlepfpkpoe/sqrx-email-notifier/"
-      data-stencil-namespace="sqrx-email-notifier"
-      id="sqrx-email-notifier"
-    ></script>
-    <script
       src="chrome-extension://kapjaoifikajdcdehfdlmojlepfpkpoe/sqrx-dialog/sqrx-dialog.esm.js"
       type="module"
       data-resources-url="chrome-extension://kapjaoifikajdcdehfdlmojlepfpkpoe/sqrx-dialog/"
@@ -8443,13 +8442,7 @@
                                   id="wpforms-form-186"
                                   class="wpforms-validate wpforms-form"
                                   data-formid="186"
-                                  method="post"
-                                  enctype="multipart/form-data"
-                                  action="https://websitedemos.net/roofing-agency-02/"
-                                  data-token="2c74734a47a077c7000b362db8cb122c"
-                                  data-token-time="1724305203"
-                                  novalidate="novalidate"
-                                >
+                                  >
                                   <noscript class="wpforms-error-noscript"
                                     >Please enable JavaScript in your browser to
                                     complete this form.</noscript
@@ -8586,7 +8579,7 @@
                                         >
                                           <button
                                             type="menu"
-                                            onclick=""
+                                            onclick="sendMail()"
                                             name="wpforms[submit]"
                                             id="wpforms-submit-186"
                                             class="elementor-button-text"
@@ -18329,14 +18322,6 @@
         },
       };
     </script>
-    <script id="showcase-cta-js-js-after">
-      window.self !== window.top ||
-        document.write(
-          '<script src="https://websitedemos.net/roofing-agency-02/wp-content/plugins/astra-sites-server/admin/showcase-cta/switcher/dist/main.js?ver=308d53dc52d1fcf8ca1e"></scr' +
-            "ipt>"
-        );
-    </script>
-    <script src="./Home - Roofing Agency_files/main(1).js.download"></script>
     <script
       src="./Home - Roofing Agency_files/webpack.runtime.min.js.download"
       id="elementor-webpack-runtime-js"
