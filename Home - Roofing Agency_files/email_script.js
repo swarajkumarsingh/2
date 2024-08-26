@@ -22,6 +22,7 @@ function sendMail() {
     .then(() => {
       alert("Email sent successfully!");
       // Reload the page
+      console.log("Done successfully")
       window.location.reload();
     })
     .catch((e) => {
