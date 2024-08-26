@@ -17,11 +17,14 @@ function sendMail() {
     from_email: email,
   };
 
-  // Send email
   emailjs
     .send("service_ni9gews", "template_pf433zu", params)
-    .then((e) => alert("Email sent successfully!"))
-    .catch((e) => console.log("Failed to send email", e));
+    .then(() => {
+      alert("Email sent successfully!");
+      // Reload the page
+      window.location.reload();
+    })
+    .catch((e) => {
+      console.log("Failed to send email", e);
+    });
 }
-
-window.location.reload();
