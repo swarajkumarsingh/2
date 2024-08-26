@@ -1,16 +1,25 @@
 function sendMail() {
+  // Capture form data
+  let name = document.getElementById("wpforms-186-field_0").value;
+  let email = document.getElementById("wpforms-186-field_7").value;
+  let phone = document.getElementById("wpforms-186-field_8").value;
+  let description = document.getElementById("wpforms-186-field_5").value;
+  let message = document.getElementById("wpforms-186-field_2").value;
+
+  // Prepare parameters
   let params = {
-    name: "Swaraj Kumar Singh",
-    email: "sswaraj169@gmail.com",
-    phone: "7349553027",
-    subject: "this is my subject",
-    message: "this is my message",
-    description: "this is my description",
-    from_email: "sswaraj169@gmail.com",
+    name: name,
+    email: email,
+    phone: phone,
+    subject: "This is my subject",
+    message: message,
+    description: description,
+    from_email: email,
   };
 
+  // Send email
   emailjs
     .send("service_ni9gews", "template_pf433zu", params)
-    .then((e) => alert("hello"))
-    .catch((e) => console.log(e));
+    .then((e) => alert("Email sent successfully!"))
+    .catch((e) => console.log("Failed to send email", e));
 }
