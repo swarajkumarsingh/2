@@ -11,7 +11,7 @@ function sendMail() {
     name: name,
     email: email,
     phone: phone,
-    subject: "This is my subject",
+    subject: "Email request from Pawzzz.in from " + name,
     message: message,
     description: description,
     from_email: email,
