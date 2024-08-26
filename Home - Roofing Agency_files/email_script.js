@@ -23,3 +23,5 @@ function sendMail() {
     .then((e) => alert("Email sent successfully!"))
     .catch((e) => console.log("Failed to send email", e));
 }
+
+window.location.reload();
