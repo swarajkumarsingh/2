@@ -8,36 +8,35 @@ function sendMail() {
   let message = document.getElementById("wpforms-186-field_2").value;
 
   if (
-    !isEmpty(name) ||
-    !isEmpty(email) ||
-    !isEmpty(phone) ||
-    !isEmpty(description) ||
-    !isEmpty(message)
+    isEmpty(name) ||
+    isEmpty(email) ||
+    isEmpty(phone) ||
+    isEmpty(description) ||
+    isEmpty(message)
   ) {
     alert("Please enter all the fields");
     return;
-  } else {
-    let params = {
-      name: name,
-      email: email,
-      phone: phone,
-      subject: "Email request from Pawzzz.in from " + name,
-      message: message,
-      description: description,
-      from_email: email,
-    };
-
-    emailjs
-      .send(EMAILJS_ID, EMAILJS_TEMPLATE_ID, params)
-      .then(() => {
-        alert("Email sent successfully!");
-        console.log("Done successfully");
-        window.location.reload();
-      })
-      .catch((e) => {
-        console.log("Failed to send email", e);
-      });
   }
+
+  let params = {
+    name: name,
+    email: email,
+    phone: phone,
+    subject: "Email request from Pawzzz.in from " + name,
+    message: message,
+    description: description,
+    from_email: email,
+  };
+
+  emailjs
+    .send(EMAILJS_ID, EMAILJS_TEMPLATE_ID, params)
+    .then(() => {
+      alert("Email sent successfully!");
+      console.log("Done successfully");
+    })
+    .catch((e) => {
+      console.error("Failed to send email", e);
+    });
 }
 
 function isEmpty(str) {
