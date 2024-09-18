@@ -1,6 +1,6 @@
 import { EMAILJS_ID, EMAILJS_TEMPLATE_ID } from "./keys.js";
 
-function sendMail() {
+async function sendMail() {
   let name = document.getElementById("wpforms-186-field_0").value;
   let email = document.getElementById("wpforms-186-field_7").value;
   let phone = document.getElementById("wpforms-186-field_8").value;
@@ -28,17 +28,19 @@ function sendMail() {
     from_email: email,
   };
 
-  emailjs
-    .send(EMAILJS_ID, EMAILJS_TEMPLATE_ID, params)
-    .then(() => {
-      alert("Email sent successfully!");
-      console.log("Done successfully");
-    })
-    .catch((e) => {
-      console.error("Failed to send email", e);
-    });
+  try {
+    await emailjs.send(EMAILJS_ID, EMAILJS_TEMPLATE_ID, params);
+    console.log("Email sent successfully");
+  } catch (e) {
+    console.error("Failed to send email", e);
+  }finally {
+    alert("Email sent successfully!");
+  }
 }
 
 function isEmpty(str) {
-  return str == null || str.trim() === "";
+  if (str == null || str == "") {
+    return true;
+  }
+  return false;
 }
