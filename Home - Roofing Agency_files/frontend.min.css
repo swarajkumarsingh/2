@@ -509,7 +509,7 @@
   background-color: transparent;
 }
 .elementor img {
-  height: auto;
+  height: -webkit-fill-available;
   max-width: 100%;
   border: none;
   border-radius: 0;
