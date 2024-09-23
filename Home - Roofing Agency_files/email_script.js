@@ -15,12 +15,13 @@ function sendMail() {
     from_email: email,
   };
 
+  console.log(params);
+
   emailjs
     .send("service_ni9gews", "template_pf433zu", params)
     .then(() => {
       alert("Email sent successfully!");
       console.log("Done successfully");
-      window.location.reload();
     })
     .catch((e) => {
       console.log("Failed to send email", e);
